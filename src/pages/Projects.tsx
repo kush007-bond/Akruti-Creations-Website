@@ -15,7 +15,7 @@ const Projects: React.FC = () => {
           <h1 className="text-8xl md:text-[12rem] font-bold tracking-tighter leading-[0.8] mb-12 uppercase">
             THE <span className="text-accent italic">WORKS</span>
           </h1>
-          <p className="text-2xl text-surface/60 max-w-2xl font-medium">
+          <p className="text-2xl text-foreground/60 max-w-2xl font-medium">
             Evidence of our capability. We bring complex visions to life through design and engineering.
           </p>
         </motion.div>
@@ -44,7 +44,7 @@ const Projects: React.FC = () => {
                     onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/1a1a1a/e9b741?text=Akruti+Project"; }}
                   />
                   <div className="absolute top-6 left-6">
-                    <span className="bg-accent text-surface px-4 py-1 rounded-full text-[10px] font-black tracking-widest uppercase shadow-lg">
+                    <span className="bg-accent text-base px-4 py-1 rounded-full text-[10px] font-black tracking-widest uppercase shadow-lg">
                       {project.category}
                     </span>
                   </div>
@@ -63,7 +63,7 @@ const Projects: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: false }}
                   transition={{ delay: 0.3 }}
-                  className="text-lg text-surface/60 max-w-xl font-medium"
+                  className="text-lg text-foreground/60 max-w-xl font-medium"
                 >
                   {project.description}
                 </motion.p>

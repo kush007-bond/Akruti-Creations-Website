@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Philosophy: React.FC = () => {
   return (
-    <section className="py-40 px-6 bg-surface text-base">
+    <section className="py-40 px-6 bg-base text-foreground">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <motion.div
@@ -25,10 +25,10 @@ const Philosophy: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-8"
           >
-            <p className="text-2xl text-base/70 font-medium leading-relaxed">
+            <p className="text-2xl text-foreground/70 font-medium leading-relaxed">
               Creativity runs in our blood. Akruti, our dynamic team not only consists of the best creators, but also experts at thought and innovation!
             </p>
-            <p className="text-xl text-base/50 leading-relaxed">
+            <p className="text-xl text-foreground/50 leading-relaxed">
               Being a creative house, our hands play with anything that can use an artistic touch. We let you focus on your core business while we handle the innovation!
             </p>
           </motion.div>

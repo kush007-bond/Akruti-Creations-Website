@@ -16,9 +16,9 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-base/10 backdrop-blur-xl border-b border-surface/10">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-base/80 backdrop-blur-xl border-b border-foreground/10">
       <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
-        <Link to="/" className="text-3xl font-bold tracking-tighter text-surface hover:opacity-80 transition-opacity uppercase">
+        <Link to="/" className="text-3xl font-bold tracking-tighter text-foreground hover:opacity-80 transition-opacity uppercase">
           A<span className="text-accent">K</span>RUTI
         </Link>
         
@@ -30,7 +30,7 @@ const Navbar: React.FC = () => {
                 key={link.path}
                 to={link.path}
                 className={`relative text-sm font-bold uppercase tracking-widest transition-colors py-2 px-1 ${
-                  isActive ? 'text-accent' : 'text-surface/70 hover:text-surface'
+                  isActive ? 'text-accent' : 'text-foreground/70 hover:text-foreground'
                 }`}
               >
                 {link.name}
@@ -45,26 +45,13 @@ const Navbar: React.FC = () => {
             );
           })}
           
-          <div className="h-4 w-px bg-surface/10 mx-2" />
-          
-          <Link 
-            to="/portal" 
-            className={`text-xs font-black uppercase tracking-[0.2em] px-4 py-2 border rounded-full transition-all ${
-              location.pathname === '/portal' 
-              ? 'bg-accent border-accent text-surface' 
-              : 'border-surface/20 text-surface/60 hover:border-accent hover:text-accent'
-            }`}
-          >
-            Studio
-          </Link>
-          
           <ThemeToggle />
         </div>
 
         <div className="md:hidden flex items-center gap-4">
           <ThemeToggle />
           <button 
-            className="text-surface"
+            className="text-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X /> : <Menu />}
@@ -78,28 +65,21 @@ const Navbar: React.FC = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-base border-b border-surface/10 overflow-hidden"
+            className="md:hidden bg-base border-b border-foreground/10 overflow-hidden shadow-2xl"
           >
-            <div className="flex flex-col p-6 space-y-6">
+            <div className="flex flex-col p-6 space-y-6 bg-base">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={`text-2xl font-bold uppercase tracking-widest ${
-                    location.pathname === link.path ? 'text-accent' : 'text-surface'
+                    location.pathname === link.path ? 'text-accent' : 'text-foreground'
                   }`}
                 >
                   {link.name}
                 </Link>
               ))}
-              <Link 
-                to="/portal" 
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="bg-accent text-surface text-center py-4 rounded-xl font-bold uppercase tracking-widest"
-              >
-                Studio Portal
-              </Link>
             </div>
           </motion.div>
         )}

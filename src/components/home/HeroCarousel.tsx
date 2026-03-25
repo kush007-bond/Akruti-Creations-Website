@@ -11,7 +11,7 @@ import bannerWorkspace from '../../assets/images/minimalist-creative-workspace-f
 
 const carouselData = [
   {
-    image: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1600&auto=format&fit=crop",
+    image: "/images/akruti-designs/villasa-1.jpg",
     tagline: "Imagine. Create. Design.",
     title: "WE SHAPE",
     titleAccent: "YOUR VISION",
@@ -25,7 +25,7 @@ const carouselData = [
     description: "Bringing a unique, out-of-the-box touch to every project we conceptualize and produce."
   },
   {
-    image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1600&auto=format&fit=crop",
+    image: "/images/stage/stall-design.jpg",
     tagline: "Design | Print | Event",
     title: "IMPACTFUL",
     titleAccent: "EXPERIENCES",
@@ -39,7 +39,7 @@ const carouselData = [
     description: "Strategic customization and high-tech hardware ensuring unrivalled quality for your brand."
   },
   {
-    image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=1600&auto=format&fit=crop",
+    image: "/images/movie-posters/bharate.jpg",
     tagline: "Creativity is our Passion",
     title: "INNOVATION",
     titleAccent: "OUR CORE",
@@ -93,7 +93,7 @@ const HeroCarousel: React.FC = () => {
   }, [paginate]);
 
   return (
-    <section className="relative h-screen w-full overflow-hidden bg-surface">
+    <section className="relative h-screen w-full overflow-hidden bg-base">
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
           key={currentIndex}
@@ -127,7 +127,7 @@ const HeroCarousel: React.FC = () => {
               className="absolute inset-0 w-full h-full object-cover grayscale-[0.5] brightness-[0.4]"
               loading="eager"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/40 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-base via-base/40 to-transparent"></div>
           </div>
 
           {/* Content Overlay */}
@@ -142,21 +142,21 @@ const HeroCarousel: React.FC = () => {
                 <span className="text-accent font-black tracking-[0.4em] text-xs mb-6 block uppercase">
                   {carouselData[currentIndex].tagline}
                 </span>
-                <h1 className="text-6xl md:text-[8rem] font-bold leading-[0.9] tracking-tighter mb-10 text-base">
+                <h1 className="text-6xl md:text-[8rem] font-bold leading-[0.9] tracking-tighter mb-10 text-foreground">
                   {carouselData[currentIndex].title} <br />
                   <span className="text-accent italic">{carouselData[currentIndex].titleAccent}</span>
                 </h1>
-                <p className="text-xl md:text-2xl text-base/60 max-w-2xl mb-12 font-medium leading-tight">
+                <p className="text-xl md:text-2xl text-foreground/60 max-w-2xl mb-12 font-medium leading-tight">
                   {carouselData[currentIndex].description}
                 </p>
                 
                 <div className="flex flex-wrap gap-6">
                   <MagneticButton>
-                    <Link to="/projects" className="inline-flex items-center gap-4 bg-accent text-surface px-10 py-5 rounded-full font-bold hover:bg-base transition-all group shadow-xl">
+                    <Link to="/projects" className="inline-flex items-center gap-4 bg-accent text-[#1A1A1A] px-10 py-5 rounded-full font-bold hover:bg-foreground hover:text-base transition-all group shadow-xl">
                       EXPLORE WORKS <ArrowRight className="group-hover:translate-x-2 transition-transform" />
                     </Link>
                   </MagneticButton>
-                  <Link to="/contact" className="inline-flex items-center gap-4 border-2 border-base/20 text-base px-10 py-5 rounded-full font-bold hover:border-accent hover:text-accent transition-all">
+                  <Link to="/contact" className="inline-flex items-center gap-4 border-2 border-foreground/20 text-foreground px-10 py-5 rounded-full font-bold hover:border-accent hover:text-accent transition-all">
                     GET IN TOUCH
                   </Link>
                 </div>
@@ -170,13 +170,13 @@ const HeroCarousel: React.FC = () => {
       <div className="absolute bottom-10 right-6 md:right-20 flex gap-4 z-20">
         <button
           onClick={() => paginate(-1)}
-          className="w-14 h-14 rounded-full border border-base/20 flex items-center justify-center text-base hover:bg-accent hover:border-accent hover:text-surface transition-all"
+          className="w-14 h-14 rounded-full border border-foreground/20 flex items-center justify-center text-foreground hover:bg-accent hover:border-accent hover:text-[#1A1A1A] transition-all"
         >
           <ChevronLeft size={24} />
         </button>
         <button
           onClick={() => paginate(1)}
-          className="w-14 h-14 rounded-full border border-base/20 flex items-center justify-center text-base hover:bg-accent hover:border-accent hover:text-surface transition-all"
+          className="w-14 h-14 rounded-full border border-foreground/20 flex items-center justify-center text-foreground hover:bg-accent hover:border-accent hover:text-[#1A1A1A] transition-all"
         >
           <ChevronRight size={24} />
         </button>
@@ -192,7 +192,7 @@ const HeroCarousel: React.FC = () => {
               setCurrentIndex(idx);
             }}
             className={`h-2 rounded-full transition-all duration-500 ${
-              currentIndex === idx ? "w-12 bg-accent" : "w-2 bg-base/20 hover:bg-base/40"
+              currentIndex === idx ? "w-12 bg-accent" : "w-2 bg-foreground/20 hover:bg-foreground/40"
             }`}
           />
         ))}

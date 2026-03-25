@@ -3,31 +3,41 @@ import { Sun, Moon } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const ThemeToggle: React.FC = () => {
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('akruti-theme') as 'light' | 'dark' | null;
-    if (savedTheme) {
-      setTheme(savedTheme);
-      document.documentElement.setAttribute('data-theme', savedTheme);
+    const themeToApply = savedTheme || 'dark';
+    
+    setTheme(themeToApply);
+    document.documentElement.setAttribute('data-theme', themeToApply);
+    
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    if (metaThemeColor) {
+      metaThemeColor.setAttribute('content', themeToApply === 'dark' ? '#1A1A1A' : '#F9F9F9');
     }
   }, []);
 
   const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
+    const newTheme = theme === 'dark' ? 'light' : 'dark';
     setTheme(newTheme);
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('akruti-theme', newTheme);
+    
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    if (metaThemeColor) {
+      metaThemeColor.setAttribute('content', newTheme === 'dark' ? '#1A1A1A' : '#F9F9F9');
+    }
   };
 
   return (
     <motion.button
       whileTap={{ scale: 0.9 }}
       onClick={toggleTheme}
-      className="p-2 rounded-full bg-surface/5 text-surface hover:bg-accent hover:text-surface transition-colors duration-300"
+      className="p-2 rounded-full bg-foreground/5 text-foreground hover:bg-accent hover:text-[#1A1A1A] transition-colors duration-300"
       aria-label="Toggle Theme"
     >
-      {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+      {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
     </motion.button>
   );
 };

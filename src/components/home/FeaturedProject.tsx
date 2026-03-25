@@ -17,7 +17,7 @@ const FeaturedProject: React.FC = () => {
           >
             <span className="text-accent font-bold uppercase tracking-widest text-sm">Iconic Case Study</span>
             <h3 className="text-7xl font-bold tracking-tighter mt-4 mb-8 uppercase">LALBAGH <br/> FLOWER SHOW</h3>
-            <p className="text-2xl text-surface/70 font-medium leading-relaxed mb-10">
+            <p className="text-2xl text-foreground/70 font-medium leading-relaxed mb-10">
               A massive undertaking involving spatial design, 3D sculptures, event branding, and technical installation for over 1 million visitors.
             </p>
             <MagneticButton>
@@ -36,7 +36,7 @@ const FeaturedProject: React.FC = () => {
           >
             <div className="aspect-square bg-surface/5 rounded-[4rem] overflow-hidden shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1200&auto=format&fit=crop" 
+                src="/images/akruti-designs/farmhouse-1.jpg"
                 alt="Lalbagh Flower Show" 
                 className="w-full h-full object-cover"
               />
@@ -45,7 +45,7 @@ const FeaturedProject: React.FC = () => {
             <motion.div 
               animate={{ rotate: 360 }}
               transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-              className="absolute -top-10 -right-10 w-40 h-40 bg-accent rounded-full flex items-center justify-center text-surface font-black text-center p-6 text-xs uppercase tracking-tighter shadow-2xl"
+              className="absolute -top-10 -right-10 w-40 h-40 bg-accent rounded-full flex items-center justify-center text-[#1A1A1A] font-black text-center p-6 text-xs uppercase tracking-tighter shadow-2xl"
             >
               AWARD WINNING PRODUCTION 2024
             </motion.div>

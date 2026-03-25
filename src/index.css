@@ -2,9 +2,10 @@
 
 @theme {
   --color-accent: #E9B741;
-  /* We will use CSS variables for theme-dependent colors */
-  --color-surface: var(--surface);
+  /* Consistent theme-dependent colors */
   --color-base: var(--base);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
   --color-text-muted: var(--text-muted);
   
   --font-heading: "Plus Jakarta Sans", sans-serif;
@@ -12,14 +13,20 @@
 }
 
 :root {
-  --base: #F9F9F9;
-  --surface: #1A1A1A;
-  --text-muted: rgba(26, 26, 26, 0.6);
+  --base: #1A1A1A;
+  --surface: #242424;
+  --foreground: #F9F9F9;
+  --text-muted: rgba(249, 249, 249, 0.6);
   
   background-color: var(--base);
-  color: var(--surface);
+  color: var(--foreground);
   font-family: var(--font-body);
   transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body {
+  background-color: var(--base);
+  color: var(--foreground);
 }
 
 @media (min-width: 768px) {
@@ -28,10 +35,11 @@
   }
 }
 
-[data-theme='dark'] {
-  --base: #1A1A1A;
-  --surface: #F9F9F9;
-  --text-muted: rgba(249, 249, 249, 0.6);
+[data-theme='light'] {
+  --base: #F9F9F9;
+  --surface: #FFFFFF;
+  --foreground: #1A1A1A;
+  --text-muted: rgba(26, 26, 26, 0.6);
 }
 
 h1, h2, h3, h4, h5, h6 {

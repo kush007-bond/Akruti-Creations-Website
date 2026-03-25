@@ -56,12 +56,12 @@ const Contact: React.FC = () => {
                 }
               ].map((item, idx) => (
                 <motion.div key={idx} variants={itemVariants} className="flex gap-6 group">
-                  <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center text-accent shrink-0 group-hover:bg-accent group-hover:text-surface transition-colors duration-500">
+                  <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center text-accent shrink-0 group-hover:bg-accent group-hover:text-[#1A1A1A] transition-colors duration-500">
                     {item.icon}
                   </div>
                   <div>
                     <h3 className="text-sm font-bold uppercase tracking-widest mb-2 group-hover:text-accent transition-colors uppercase">{item.title}</h3>
-                    <address className="not-italic text-lg text-surface/70 leading-relaxed font-medium whitespace-pre-line">
+                    <address className="not-italic text-lg text-foreground/70 leading-relaxed font-medium whitespace-pre-line">
                       {item.content}
                     </address>
                   </div>
@@ -72,36 +72,36 @@ const Contact: React.FC = () => {
 
           <motion.div
             variants={itemVariants}
-            className="bg-base p-12 rounded-2xl shadow-sm border border-surface/5"
+            className="bg-surface p-12 rounded-2xl shadow-sm border border-foreground/5"
           >
             <form className="space-y-8" onSubmit={(e) => e.preventDefault()}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <motion.div variants={itemVariants} className="space-y-2">
-                  <label className="text-xs font-bold uppercase tracking-widest text-surface/50">Full Name</label>
-                  <input type="text" className="w-full bg-base border-none focus:ring-2 focus:ring-accent rounded-lg p-4 transition-all outline-none" placeholder="John Doe" />
+                  <label className="text-xs font-bold uppercase tracking-widest text-foreground/50">Full Name</label>
+                  <input type="text" className="w-full bg-base border-none focus:ring-2 focus:ring-accent rounded-lg p-4 transition-all outline-none text-foreground" placeholder="John Doe" />
                 </motion.div>
                 <motion.div variants={itemVariants} className="space-y-2">
-                  <label className="text-xs font-bold uppercase tracking-widest text-surface/50">Email Address</label>
-                  <input type="email" className="w-full bg-base border-none focus:ring-2 focus:ring-accent rounded-lg p-4 transition-all outline-none" placeholder="john@example.com" />
+                  <label className="text-xs font-bold uppercase tracking-widest text-foreground/50">Email Address</label>
+                  <input type="email" className="w-full bg-base border-none focus:ring-2 focus:ring-accent rounded-lg p-4 transition-all outline-none text-foreground" placeholder="john@example.com" />
                 </motion.div>
               </div>
               <motion.div variants={itemVariants} className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-surface/50">Subject</label>
-                <select className="w-full bg-base border-none focus:ring-2 focus:ring-accent rounded-lg p-4 transition-all appearance-none cursor-pointer outline-none">
-                  <option>New Project Inquiry</option>
-                  <option>Collaboration</option>
-                  <option>Event Production</option>
-                  <option>Print Requirements</option>
+                <label className="text-xs font-bold uppercase tracking-widest text-foreground/50">Subject</label>
+                <select className="w-full bg-base border-none focus:ring-2 focus:ring-accent rounded-lg p-4 transition-all appearance-none cursor-pointer outline-none text-foreground">
+                  <option className="bg-base">New Project Inquiry</option>
+                  <option className="bg-base">Collaboration</option>
+                  <option className="bg-base">Event Production</option>
+                  <option className="bg-base">Print Requirements</option>
                 </select>
               </motion.div>
               <motion.div variants={itemVariants} className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-surface/50">Project Details</label>
-                <textarea className="w-full bg-base border-none focus:ring-2 focus:ring-accent rounded-lg p-4 h-40 transition-all resize-none outline-none" placeholder="Tell us about your project..."></textarea>
+                <label className="text-xs font-bold uppercase tracking-widest text-foreground/50">Project Details</label>
+                <textarea className="w-full bg-base border-none focus:ring-2 focus:ring-accent rounded-lg p-4 h-40 transition-all resize-none outline-none text-foreground" placeholder="Tell us about your project..."></textarea>
               </motion.div>
               <motion.button 
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full bg-surface text-base py-6 rounded-lg font-bold hover:bg-accent hover:text-surface transition-all flex items-center justify-center gap-3 shadow-lg uppercase"
+                className="w-full bg-accent text-[#1A1A1A] py-6 rounded-lg font-bold hover:bg-foreground hover:text-base transition-all flex items-center justify-center gap-3 shadow-lg uppercase"
               >
                 SEND MESSAGE <Send className="w-4 h-4" />
               </motion.button>

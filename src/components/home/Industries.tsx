@@ -29,10 +29,10 @@ const Industries: React.FC = () => {
               viewport={{ once: false }}
               transition={{ duration: 0.4, delay: i * 0.05 }}
               whileHover={{ y: -5, borderColor: "#E9B741" }}
-              className="p-8 border border-surface/5 bg-base rounded-2xl text-center group transition-all shadow-sm"
+              className="p-8 border border-foreground/10 bg-surface rounded-2xl text-center group transition-all shadow-sm"
             >
-              <div className="w-12 h-1 bg-surface/5 group-hover:bg-accent mx-auto mb-6 transition-colors"></div>
-              <span className="text-lg font-bold tracking-tight text-surface/80 group-hover:text-surface">{industry}</span>
+              <div className="w-12 h-1 bg-foreground/10 group-hover:bg-accent mx-auto mb-6 transition-colors"></div>
+              <span className="text-lg font-bold tracking-tight text-foreground/80 group-hover:text-foreground">{industry}</span>
             </motion.div>
           ))}
         </div>

@@ -10,7 +10,7 @@ const stats = [
 
 const Stats: React.FC = () => {
   return (
-    <section className="py-40 px-6 relative overflow-hidden bg-surface text-base">
+    <section className="py-40 px-6 relative overflow-hidden bg-base text-foreground">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-20 text-center md:text-left">
           {stats.map((stat, i) => (
@@ -24,8 +24,8 @@ const Stats: React.FC = () => {
               <div className="text-accent text-8xl font-black tracking-tighter mb-4">
                 <Counter value={stat.value} suffix={stat.suffix} />
               </div>
-              <p className="text-xl font-bold uppercase tracking-[0.2em] text-base/40">{stat.label}</p>
-              <p className="mt-4 text-base/60">{stat.desc}</p>
+              <p className="text-xl font-bold uppercase tracking-[0.2em] text-foreground/40">{stat.label}</p>
+              <p className="mt-4 text-foreground/60">{stat.desc}</p>
             </motion.div>
           ))}
         </div>

@@ -13,7 +13,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const location = useLocation();
 
   return (
-    <div className="min-h-screen flex flex-col bg-base selection:bg-accent selection:text-surface">
+    <div className="min-h-screen flex flex-col bg-base selection:bg-accent selection:text-[#1A1A1A]">
       <CustomCursor />
       <Navbar />
       <main className="flex-grow">
