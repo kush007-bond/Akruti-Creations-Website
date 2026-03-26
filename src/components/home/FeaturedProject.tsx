@@ -5,7 +5,7 @@ import MagneticButton from '../MagneticButton';
 
 const FeaturedProject: React.FC = () => {
   return (
-    <section className="py-40 px-6 bg-base overflow-hidden">
+    <section className="py-20 md:py-40 px-6 bg-base overflow-hidden">
       <div className="max-w-7xl mx-auto relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <motion.div
@@ -16,7 +16,7 @@ const FeaturedProject: React.FC = () => {
             className="relative z-10"
           >
             <span className="text-accent font-bold uppercase tracking-widest text-sm">Iconic Case Study</span>
-            <h3 className="text-7xl font-bold tracking-tighter mt-4 mb-8 uppercase">LALBAGH <br/> FLOWER SHOW</h3>
+            <h3 className="text-4xl md:text-7xl font-bold tracking-tighter mt-4 mb-8 uppercase">LALBAGH <br/> FLOWER SHOW</h3>
             <p className="text-2xl text-foreground/70 font-medium leading-relaxed mb-10">
               A massive undertaking involving spatial design, 3D sculptures, event branding, and technical installation for over 1 million visitors.
             </p>

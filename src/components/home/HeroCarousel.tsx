@@ -142,7 +142,7 @@ const HeroCarousel: React.FC = () => {
                 <span className="text-accent font-black tracking-[0.4em] text-xs mb-6 block uppercase">
                   {carouselData[currentIndex].tagline}
                 </span>
-                <h1 className="text-6xl md:text-[8rem] font-bold leading-[0.9] tracking-tighter mb-10 text-foreground">
+                <h1 className="text-4xl sm:text-5xl md:text-[8rem] font-bold leading-[0.9] tracking-tighter mb-6 md:mb-10 text-foreground">
                   {carouselData[currentIndex].title} <br />
                   <span className="text-accent italic">{carouselData[currentIndex].titleAccent}</span>
                 </h1>
@@ -152,11 +152,11 @@ const HeroCarousel: React.FC = () => {
                 
                 <div className="flex flex-wrap gap-6">
                   <MagneticButton>
-                    <Link to="/projects" className="inline-flex items-center gap-4 bg-accent text-[#1A1A1A] px-10 py-5 rounded-full font-bold hover:bg-foreground hover:text-base transition-all group shadow-xl">
+                    <Link to="/projects" className="inline-flex items-center gap-3 md:gap-4 bg-accent text-[#1A1A1A] px-6 py-4 md:px-10 md:py-5 rounded-full font-bold hover:bg-foreground hover:text-base transition-all group shadow-xl text-sm md:text-base">
                       EXPLORE WORKS <ArrowRight className="group-hover:translate-x-2 transition-transform" />
                     </Link>
                   </MagneticButton>
-                  <Link to="/contact" className="inline-flex items-center gap-4 border-2 border-foreground/20 text-foreground px-10 py-5 rounded-full font-bold hover:border-accent hover:text-accent transition-all">
+                  <Link to="/contact" className="inline-flex items-center gap-3 md:gap-4 border-2 border-foreground/20 text-foreground px-6 py-4 md:px-10 md:py-5 rounded-full font-bold hover:border-accent hover:text-accent transition-all text-sm md:text-base">
                     GET IN TOUCH
                   </Link>
                 </div>

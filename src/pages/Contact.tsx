@@ -30,12 +30,12 @@ const Contact: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false }}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-24"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24"
         >
           
           <motion.div variants={itemVariants}>
             <span className="text-accent font-bold uppercase tracking-widest text-sm">Get in Touch</span>
-            <h1 className="text-7xl font-bold tracking-tighter mt-4 mb-12 uppercase">LET'S START SOMETHING.</h1>
+            <h1 className="text-4xl md:text-7xl font-bold tracking-tighter mt-4 mb-8 md:mb-12 uppercase">LET'S START SOMETHING.</h1>
             
             <div className="space-y-12">
               {[
@@ -72,7 +72,7 @@ const Contact: React.FC = () => {
 
           <motion.div
             variants={itemVariants}
-            className="bg-surface p-12 rounded-2xl shadow-sm border border-foreground/5"
+            className="bg-surface p-6 md:p-12 rounded-2xl shadow-sm border border-foreground/5"
           >
             <form className="space-y-8" onSubmit={(e) => e.preventDefault()}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

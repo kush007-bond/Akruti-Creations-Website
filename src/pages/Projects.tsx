@@ -6,22 +6,22 @@ import { projects } from '../data/projects';
 const Projects: React.FC = () => {
   return (
     <div className="pt-32 pb-20 px-6">
-      <header className="max-w-7xl mx-auto mb-32 text-center md:text-left">
+      <header className="max-w-7xl mx-auto mb-12 md:mb-32 text-center md:text-left">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h1 className="text-8xl md:text-[12rem] font-bold tracking-tighter leading-[0.8] mb-12 uppercase">
+          <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-[12rem] font-bold tracking-tighter leading-[0.8] mb-8 md:mb-12 uppercase">
             THE <span className="text-accent italic">WORKS</span>
           </h1>
-          <p className="text-2xl text-foreground/60 max-w-2xl font-medium">
+          <p className="text-lg md:text-2xl text-foreground/60 max-w-2xl font-medium">
             Evidence of our capability. We bring complex visions to life through design and engineering.
           </p>
         </motion.div>
       </header>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16">
         {projects.map((project, idx) => {
           const colSpan = project.size === 'large' ? 'md:col-span-12' : project.size === 'medium' ? 'md:col-span-7' : 'md:col-span-5';
           return (
@@ -40,7 +40,7 @@ const Projects: React.FC = () => {
                     transition={{ duration: 1, ease: "easeOut" }}
                     src={project.image} 
                     alt={project.title}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
+                    className="w-full h-full object-cover md:grayscale md:group-hover:grayscale-0 transition-all duration-1000"
                     onError={(e) => { e.currentTarget.src = "https://placehold.co/1200x800/1a1a1a/e9b741?text=Akruti+Project"; }}
                   />
                   <div className="absolute top-6 left-6">
@@ -54,7 +54,7 @@ const Projects: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: false }}
                   transition={{ delay: 0.2 }}
-                  className="text-4xl font-bold tracking-tight mb-4 uppercase"
+                  className="text-2xl md:text-4xl font-bold tracking-tight mb-4 uppercase"
                 >
                   {project.title}
                 </motion.h3>

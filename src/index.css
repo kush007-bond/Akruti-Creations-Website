@@ -40,6 +40,16 @@ body {
   --surface: #FFFFFF;
   --foreground: #1A1A1A;
   --text-muted: rgba(26, 26, 26, 0.6);
+  /* Also override Tailwind v4 color tokens directly so bg-base/text-foreground etc. update */
+  --color-base: #F9F9F9;
+  --color-surface: #FFFFFF;
+  --color-foreground: #1A1A1A;
+  --color-text-muted: rgba(26, 26, 26, 0.6);
+}
+
+[data-theme='light'] body {
+  background-color: #F9F9F9;
+  color: #1A1A1A;
 }
 
 h1, h2, h3, h4, h5, h6 {

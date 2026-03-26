@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Philosophy: React.FC = () => {
   return (
-    <section className="py-40 px-6 bg-base text-foreground">
+    <section className="py-20 md:py-40 px-6 bg-base text-foreground">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <motion.div
@@ -12,7 +12,7 @@ const Philosophy: React.FC = () => {
             viewport={{ once: false }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-6xl font-bold tracking-tighter mb-8 uppercase">
+            <h2 className="text-3xl md:text-6xl font-bold tracking-tighter mb-8 uppercase">
               Creativity is our <span className="text-accent italic">PASSION.</span><br />
               Innovation our <span className="text-accent italic">CORE!</span>
             </h2>

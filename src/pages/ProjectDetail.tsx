@@ -62,13 +62,13 @@ const ProjectDetail: React.FC = () => {
           className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end mb-20"
         >
           <div className="lg:col-span-8">
-            <h1 className="text-7xl md:text-9xl font-bold tracking-tighter leading-none mb-8 uppercase">
+            <h1 className="text-4xl md:text-7xl lg:text-9xl font-bold tracking-tighter leading-none mb-8 uppercase">
               {project.title.split(' ').map((word: string, i: number) => (
                 <span key={i} className={i === 1 ? "text-accent italic" : ""}>{word} </span>
               ))}
             </h1>
           </div>
-          <div className="lg:col-span-4 grid grid-cols-2 gap-8 border-l border-foreground/10 pl-8 mb-4">
+          <div className="lg:col-span-4 grid grid-cols-2 gap-8 lg:border-l border-foreground/10 lg:pl-8 mb-4">
             <div>
               <span className="text-[10px] font-black uppercase tracking-widest text-accent">Client</span>
               <p className="font-bold">{project.client}</p>
@@ -100,11 +100,11 @@ const ProjectDetail: React.FC = () => {
         <img
           src={project.image}
           alt={project.title}
-          className="w-full max-h-[85vh] object-contain grayscale hover:grayscale-0 transition-all duration-700"
+          className="w-full max-h-[85vh] object-contain md:grayscale md:hover:grayscale-0 transition-all duration-700"
         />
       </motion.section>
 
-      <div className="max-w-7xl mx-auto px-6 py-32 grid grid-cols-1 lg:grid-cols-12 gap-20">
+      <div className="max-w-7xl mx-auto px-6 py-16 md:py-32 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-20">
         <div className="lg:col-span-5">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -143,7 +143,7 @@ const ProjectDetail: React.FC = () => {
       </div>
 
       {/* Gallery — clickable images */}
-      <section className="bg-surface py-32 px-6 border-y border-foreground/5">
+      <section className="bg-surface py-16 md:py-32 px-6 border-y border-foreground/5">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {project.gallery?.map((img: string, i: number) => (
@@ -159,7 +159,7 @@ const ProjectDetail: React.FC = () => {
                 <img
                   src={img}
                   alt={`${project.title} — ${i + 1}`}
-                  className="w-full h-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-700"
+                  className="w-full h-auto object-contain md:grayscale md:group-hover:grayscale-0 transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-accent/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                   <Maximize2 className="text-[#1A1A1A] w-8 h-8" />
@@ -170,7 +170,7 @@ const ProjectDetail: React.FC = () => {
         </div>
       </section>
 
-      <div className="py-40 text-center bg-base">
+      <div className="py-20 md:py-40 text-center bg-base">
         <MagneticButton className="inline-block">
           <Link to="/contact" className="bg-accent text-[#1A1A1A] px-16 py-8 rounded-full font-black text-2xl uppercase tracking-tighter hover:scale-105 transition-transform shadow-2xl block">
             Build Something Like This

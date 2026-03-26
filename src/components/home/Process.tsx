@@ -31,7 +31,7 @@ const processSteps = [
 
 const Process: React.FC = () => {
   return (
-    <section className="py-40 px-6 bg-base border-y border-surface/5">
+    <section className="py-20 md:py-40 px-6 bg-base border-y border-surface/5">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-20">
           <motion.div 
@@ -42,7 +42,7 @@ const Process: React.FC = () => {
             className="lg:col-span-4"
           >
             <span className="text-accent font-bold uppercase tracking-widest text-sm">How we work</span>
-            <h2 className="text-6xl font-bold tracking-tighter mt-4 mb-8">THE <br/><span className="italic text-accent">LIFECYCLE</span> OF A PROJECT.</h2>
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mt-4 mb-8">THE <br/><span className="italic text-accent">LIFECYCLE</span> OF A PROJECT.</h2>
             <p className="text-lg text-foreground/60 font-medium">
               We bridge the gap between abstract design and physical reality through a rigorous four-stage workflow.
             </p>
@@ -57,7 +57,7 @@ const Process: React.FC = () => {
                 viewport={{ once: false }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
                 whileHover={{ backgroundColor: "rgba(233, 183, 65, 0.05)" }}
-                className="bg-base p-12 transition-colors group"
+                className="bg-base p-6 md:p-12 transition-colors group"
               >
                 <div className="flex justify-between items-start mb-10">
                   <div className="w-14 h-14 rounded-2xl bg-surface flex items-center justify-center text-accent group-hover:scale-110 transition-transform">
