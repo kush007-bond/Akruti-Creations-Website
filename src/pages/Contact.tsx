@@ -1,16 +1,10 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { motion, type Variants } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Loader } from 'lucide-react';
-import emailjs from '@emailjs/browser';
-
-const SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID  as string;
-const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string;
-const PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY  as string;
 
 type Status = 'idle' | 'sending' | 'success' | 'error';
 
 const Contact: React.FC = () => {
-  const formRef = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState<Status>('idle');
   const [form, setForm] = useState({
     name: '',
@@ -29,21 +23,16 @@ const Contact: React.FC = () => {
     setStatus('sending');
 
     try {
-      await emailjs.send(
-        SERVICE_ID,
-        TEMPLATE_ID,
-        {
-          from_name:  form.name,
-          from_email: form.email,
-          subject:    form.subject,
-          message:    form.message,
-        },
-        PUBLIC_KEY,
-      );
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error('Server error');
       setStatus('success');
       setForm({ name: '', email: '', subject: 'New Project Inquiry', message: '' });
     } catch (err) {
-      console.error('EmailJS error:', err);
+      console.error('Contact form error:', err);
       setStatus('error');
     }
   };
