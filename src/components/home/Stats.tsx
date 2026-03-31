@@ -18,8 +18,8 @@ const Stats: React.FC = () => {
               key={i}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false }}
-              transition={{ duration: 0.8, delay: i * 0.2 }}
+              viewport={{ once: false, margin: "100px" }}
+              transition={{ duration: 0.6, delay: i * 0.1 }}
             >
               <div className="text-accent text-6xl md:text-8xl font-black tracking-tighter mb-4">
                 <Counter value={stat.value} suffix={stat.suffix} />
@@ -30,10 +30,10 @@ const Stats: React.FC = () => {
           ))}
         </div>
       </div>
-      
+
       {/* Background Marquee Text */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-full overflow-hidden whitespace-nowrap pointer-events-none select-none opacity-5">
-        <motion.div 
+        <motion.div
           animate={{ x: [0, -1000] }}
           transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
           className="text-[25rem] font-black uppercase inline-block"

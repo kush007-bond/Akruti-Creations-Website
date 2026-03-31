@@ -55,7 +55,7 @@ const CustomCursor: React.FC = () => {
 
   return (
     <motion.div
-      className="fixed top-0 left-0 pointer-events-none z-[9999] mix-blend-difference hidden md:block"
+      className="fixed top-0 left-0 pointer-events-none z-[99999] mix-blend-difference hidden md:block"
       style={{
         x: cursorX,
         y: cursorY,

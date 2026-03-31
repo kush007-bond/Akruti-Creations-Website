@@ -11,7 +11,7 @@ const FeaturedProject: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false }}
+            viewport={{ once: false, margin: "100px" }}
             transition={{ duration: 0.8 }}
             className="relative z-10"
           >
@@ -26,23 +26,23 @@ const FeaturedProject: React.FC = () => {
               </Link>
             </MagneticButton>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false }}
+            viewport={{ once: false, margin: "100px" }}
             transition={{ duration: 1 }}
             className="relative"
           >
             <div className="aspect-square bg-surface/5 rounded-[4rem] overflow-hidden shadow-2xl">
-              <img 
+              <img
                 src="/images/akruti-designs/farmhouse-1.jpg"
-                alt="Lalbagh Flower Show" 
+                alt="Lalbagh Flower Show"
                 className="w-full h-full object-cover"
               />
             </div>
             {/* Floating Badge */}
-            <motion.div 
+            <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
               className="absolute -top-10 -right-10 w-40 h-40 bg-accent rounded-full flex items-center justify-center text-[#1A1A1A] font-black text-center p-6 text-xs uppercase tracking-tighter shadow-2xl"

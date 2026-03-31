@@ -34,10 +34,10 @@ const Process: React.FC = () => {
     <section className="py-20 md:py-40 px-6 bg-base border-y border-surface/5">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-20">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false }}
+            viewport={{ once: false, margin: "100px" }}
             transition={{ duration: 0.8 }}
             className="lg:col-span-4"
           >
@@ -47,15 +47,15 @@ const Process: React.FC = () => {
               We bridge the gap between abstract design and physical reality through a rigorous four-stage workflow.
             </p>
           </motion.div>
-          
+
           <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-px bg-foreground/10 border border-foreground/10 rounded-3xl overflow-hidden shadow-xl">
             {processSteps.map((item, idx) => (
-              <motion.div 
+              <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false }}
-                transition={{ duration: 0.6, delay: idx * 0.1 }}
+                viewport={{ once: false, margin: "100px" }}
+                transition={{ duration: 0.5, delay: idx * 0.08 }}
                 whileHover={{ backgroundColor: "rgba(233, 183, 65, 0.05)" }}
                 className="bg-base p-6 md:p-12 transition-colors group"
               >

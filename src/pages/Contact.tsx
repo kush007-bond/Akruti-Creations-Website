@@ -29,7 +29,7 @@ const Contact: React.FC = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false }}
+          viewport={{ once: false, margin: "100px" }}
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24"
         >
           

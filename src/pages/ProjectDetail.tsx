@@ -109,7 +109,7 @@ const ProjectDetail: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false }}
+            viewport={{ once: false, margin: "100px" }}
           >
             <h2 className="text-4xl font-bold tracking-tighter mb-8 uppercase italic underline decoration-accent decoration-4 underline-offset-8">The Challenge</h2>
             <p className="text-xl text-foreground/70 leading-relaxed">{project.challenge}</p>
@@ -119,8 +119,8 @@ const ProjectDetail: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false }}
-            transition={{ delay: 0.2 }}
+            viewport={{ once: false, margin: "100px" }}
+            transition={{ delay: 0.1 }}
           >
             <h2 className="text-4xl font-bold tracking-tighter mb-8 uppercase italic underline decoration-accent decoration-4 underline-offset-8">The Solution</h2>
             <p className="text-xl text-foreground/70 leading-relaxed mb-12">{project.solution}</p>
@@ -151,8 +151,8 @@ const ProjectDetail: React.FC = () => {
                 key={i}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false }}
-                transition={{ delay: (i % 3) * 0.15 }}
+                viewport={{ once: false, margin: "100px" }}
+                transition={{ delay: (i % 3) * 0.08 }}
                 className="overflow-hidden rounded-2xl group relative cursor-pointer bg-base flex items-center justify-center"
                 onClick={() => openLightbox(i + 1)}
               >
