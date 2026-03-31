@@ -6,6 +6,7 @@ import Stats from '../components/home/Stats';
 import Industries from '../components/home/Industries';
 import FeaturedProject from '../components/home/FeaturedProject';
 import CTA from '../components/home/CTA';
+import ClientMarquee from '../components/home/ClientMarquee';
 
 const Home: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const Home: React.FC = () => {
       <Philosophy />
       <Process />
       <Stats />
+      <ClientMarquee />
       <Industries />
       <FeaturedProject />
       <CTA />

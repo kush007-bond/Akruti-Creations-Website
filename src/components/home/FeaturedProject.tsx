@@ -11,7 +11,7 @@ const FeaturedProject: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false, margin: "100px" }}
+            viewport={{ once: true, margin: "100px" }}
             transition={{ duration: 0.8 }}
             className="relative z-10"
           >
@@ -30,7 +30,7 @@ const FeaturedProject: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false, margin: "100px" }}
+            viewport={{ once: true, margin: "100px" }}
             transition={{ duration: 1 }}
             className="relative"
           >
@@ -38,6 +38,8 @@ const FeaturedProject: React.FC = () => {
               <img
                 src="/images/akruti-designs/farmhouse-1.jpg"
                 alt="Lalbagh Flower Show"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover"
               />
             </div>

@@ -9,7 +9,7 @@ const Philosophy: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false, margin: "100px" }}
+            viewport={{ once: true, margin: "100px" }}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-6xl font-bold tracking-tighter mb-8 uppercase">
@@ -21,7 +21,7 @@ const Philosophy: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false, margin: "100px" }}
+            viewport={{ once: true, margin: "100px" }}
             transition={{ duration: 0.8, delay: 0.15 }}
             className="space-y-8"
           >

@@ -19,8 +19,12 @@ const Navbar: React.FC = () => {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-base/80 backdrop-blur-xl border-b border-foreground/10">
       <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
-        <Link to="/" className="text-3xl font-bold tracking-tighter text-foreground hover:opacity-80 transition-opacity uppercase">
-          A<span className="text-accent">K</span>RUTI
+        <Link to="/" className="hover:opacity-80 transition-opacity">
+          <img
+            src="/images/Main logo/fdd36063-bd41-4289-8891-57e9d1ec5124_removalai_preview.png"
+            alt="Akruti Logo"
+            className="h-20 w-auto object-contain"
+          />
         </Link>
         
         <div className="hidden md:flex items-center space-x-8">

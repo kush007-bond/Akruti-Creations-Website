@@ -156,7 +156,10 @@ const HeroCarousel: React.FC = () => {
                       EXPLORE WORKS <ArrowRight className="group-hover:translate-x-2 transition-transform" />
                     </Link>
                   </MagneticButton>
-                  <Link to="/contact" className="inline-flex items-center gap-3 md:gap-4 border-2 border-foreground/20 text-foreground px-6 py-4 md:px-10 md:py-5 rounded-full font-bold hover:border-accent hover:text-accent transition-all text-sm md:text-base">
+                  <Link to="/contact" style={{ color: '#ffffff', borderColor: '#ffffff' }} className="inline-flex items-center gap-3 md:gap-4 border-2 bg-white/10 backdrop-blur-sm px-6 py-4 md:px-10 md:py-5 rounded-full font-bold hover:border-accent hover:bg-accent/10 transition-all text-sm md:text-base"
+                    onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.color = '#E9B741'; (e.currentTarget as HTMLAnchorElement).style.borderColor = '#E9B741'; }}
+                    onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.color = '#ffffff'; (e.currentTarget as HTMLAnchorElement).style.borderColor = '#ffffff'; }}
+                  >
                     GET IN TOUCH
                   </Link>
                 </div>
