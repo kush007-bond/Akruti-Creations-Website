@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
           <img
             src="/images/Main logo/fdd36063-bd41-4289-8891-57e9d1ec5124_removalai_preview.png"
             alt="Akruti Logo"
-            className="h-20 w-auto object-contain"
+            className="h-24 w-auto object-contain"
           />
         </Link>
         
