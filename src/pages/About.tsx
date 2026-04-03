@@ -90,7 +90,7 @@ const About: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false, margin: '100px' }}
+            viewport={{ once: true, margin: '100px' }}
             transition={{ duration: 0.8 }}
           >
             <p className="text-sm font-bold uppercase tracking-widest text-accent mb-4">About Us</p>
@@ -114,7 +114,7 @@ const About: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false, margin: '100px' }}
+            viewport={{ once: true, margin: '100px' }}
             transition={{ duration: 0.8, delay: 0.15 }}
             className="grid grid-cols-2 gap-6"
           >
@@ -123,7 +123,7 @@ const About: React.FC = () => {
                 key={m.label}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false, margin: '100px' }}
+                viewport={{ once: true, margin: '100px' }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
                 className="bg-base border border-foreground/10 rounded-2xl p-8 flex flex-col justify-between"
               >
@@ -141,7 +141,7 @@ const About: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, margin: '100px' }}
+            viewport={{ once: true, margin: '100px' }}
             transition={{ duration: 0.7 }}
             className="border-t-2 border-accent pt-8"
           >
@@ -157,7 +157,7 @@ const About: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, margin: '100px' }}
+            viewport={{ once: true, margin: '100px' }}
             transition={{ duration: 0.7, delay: 0.15 }}
             className="border-t-2 border-foreground/20 pt-8"
           >
@@ -178,7 +178,7 @@ const About: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, margin: '100px' }}
+            viewport={{ once: true, margin: '100px' }}
             transition={{ duration: 0.7 }}
             className="mb-16 md:mb-24"
           >
@@ -197,7 +197,7 @@ const About: React.FC = () => {
                   key={r.title}
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: false, margin: '100px' }}
+                  viewport={{ once: true, margin: '100px' }}
                   transition={{ duration: 0.6, delay: (i % 4) * 0.08 }}
                   className="bg-base border border-foreground/10 rounded-2xl p-8 flex flex-col gap-5 hover:border-accent/40 transition-colors duration-300"
                 >
@@ -221,7 +221,7 @@ const About: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, margin: '100px' }}
+            viewport={{ once: true, margin: '100px' }}
             transition={{ duration: 0.7 }}
             className="space-y-8"
           >

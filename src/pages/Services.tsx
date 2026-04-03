@@ -55,7 +55,7 @@ const Services: React.FC = () => {
             key={service.title}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, margin: "100px" }}
+            viewport={{ once: true, margin: "100px" }}
             transition={{ duration: 0.8, delay: idx * 0.1 }}
             className="relative aspect-square md:aspect-auto md:h-[80vh] group overflow-hidden bg-base cursor-pointer"
             onClick={() => setSelected(service)}
@@ -74,7 +74,7 @@ const Services: React.FC = () => {
               <motion.div
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: false, margin: "100px" }}
+                viewport={{ once: true, margin: "100px" }}
                 transition={{ delay: 0.2 }}
                 className="text-accent mb-8"
               >
@@ -83,7 +83,7 @@ const Services: React.FC = () => {
               <motion.h2
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: false, margin: "100px" }}
+                viewport={{ once: true, margin: "100px" }}
                 transition={{ delay: 0.3 }}
                 className="text-4xl md:text-5xl font-bold text-foreground tracking-tighter mb-6 uppercase"
               >
@@ -92,7 +92,7 @@ const Services: React.FC = () => {
               <motion.p
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: false, margin: "100px" }}
+                viewport={{ once: true, margin: "100px" }}
                 transition={{ delay: 0.4 }}
                 className="text-lg text-foreground leading-relaxed font-light mb-12 max-w-md"
               >
@@ -101,7 +101,7 @@ const Services: React.FC = () => {
               <motion.div
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: false, margin: "100px" }}
+                viewport={{ once: true, margin: "100px" }}
                 transition={{ delay: 0.5 }}
                 className="flex items-center gap-2 text-accent font-bold tracking-widest uppercase border-b-2 border-accent w-fit pb-2 hover:text-foreground hover:border-foreground transition-colors"
               >
@@ -122,7 +122,7 @@ const Services: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: false, margin: "100px" }}
+          viewport={{ once: true, margin: "100px" }}
         >
           <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-12 uppercase">HAVE A SPECIFIC REQUIREMENT?</h2>
           <Link to="/contact" className="inline-block bg-[#1A1A1A] text-[#E9B741] px-12 py-6 rounded-full font-black text-xl hover:bg-[#333] transition-all uppercase shadow-xl">

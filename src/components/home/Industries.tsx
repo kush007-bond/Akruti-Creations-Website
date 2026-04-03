@@ -13,7 +13,7 @@ const Industries: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, margin: "100px" }}
+          viewport={{ once: true, margin: "100px" }}
           className="text-center mb-24"
         >
           <span className="text-accent font-bold uppercase tracking-widest text-sm">Our Reach</span>
@@ -26,7 +26,7 @@ const Industries: React.FC = () => {
               key={i}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: false, margin: "100px" }}
+              viewport={{ once: true, margin: "100px" }}
               transition={{ duration: 0.4, delay: i * 0.05 }}
               whileHover={{ y: -5, borderColor: "#E9B741" }}
               className="p-5 md:p-8 border border-foreground/10 bg-surface rounded-2xl text-center group transition-all shadow-sm"

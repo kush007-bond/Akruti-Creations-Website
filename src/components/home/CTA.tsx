@@ -10,7 +10,7 @@ const CTA: React.FC = () => {
         <motion.h2 
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 0.1, y: 0 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           transition={{ duration: 1.5 }}
           className="text-[12vw] font-bold tracking-tighter leading-none mb-20 uppercase"
         >
@@ -19,7 +19,7 @@ const CTA: React.FC = () => {
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.5 }}
           className="flex flex-col items-center justify-center gap-12"
         >

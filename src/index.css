@@ -86,6 +86,11 @@ body {
   --color-surface: rgba(255, 255, 255, 0.25);
 }
 
+/* Smooth theme transitions on sections and key elements */
+body, section, header, nav, footer, div.section-yellow {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
 }

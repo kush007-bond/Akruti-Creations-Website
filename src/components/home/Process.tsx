@@ -37,7 +37,7 @@ const Process: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false, margin: "100px" }}
+            viewport={{ once: true, margin: "100px" }}
             transition={{ duration: 0.8 }}
             className="lg:col-span-4"
           >
@@ -54,7 +54,7 @@ const Process: React.FC = () => {
                 key={idx}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false, margin: "100px" }}
+                viewport={{ once: true, margin: "100px" }}
                 transition={{ duration: 0.5, delay: idx * 0.08 }}
                 whileHover={{ backgroundColor: "rgba(233, 183, 65, 0.05)" }}
                 className="bg-base p-6 md:p-12 transition-colors group"
