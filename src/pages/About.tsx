@@ -13,9 +13,9 @@ import {
 } from 'lucide-react';
 
 const milestones = [
-  { value: '500+', label: 'Projects Delivered' },
+  { value: '150+', label: 'Projects Delivered' },
   { value: '12+', label: 'Years of Excellence' },
-  { value: '300+', label: 'Satisfied Clients' },
+  { value: '1k+', label: 'Sq. Ft. Fabricated' },
   { value: '6', label: 'Core Service Verticals' },
 ];
 
@@ -67,7 +67,7 @@ const About: React.FC = () => {
     <div className="bg-base text-foreground">
 
       {/* ── Hero ── */}
-      <section className="pt-32 pb-20 px-6">
+      <section className="pt-32 pb-20 px-6 section-yellow">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -85,7 +85,7 @@ const About: React.FC = () => {
       </section>
 
       {/* ── About Us ── */}
-      <section className="py-20 md:py-32 px-6 bg-surface">
+      <section className="py-20 md:py-32 px-6 bg-base">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -136,7 +136,7 @@ const About: React.FC = () => {
       </section>
 
       {/* ── Mission & Vision ── */}
-      <section className="py-20 md:py-32 px-6">
+      <section className="py-20 md:py-32 px-6 section-yellow">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -173,7 +173,7 @@ const About: React.FC = () => {
       </section>
 
       {/* ── Why Choose Us ── */}
-      <section className="py-20 md:py-32 px-6 bg-surface">
+      <section className="py-20 md:py-32 px-6 bg-base">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -216,7 +216,7 @@ const About: React.FC = () => {
       </section>
 
       {/* ── CTA ── */}
-      <section className="py-20 md:py-32 px-6">
+      <section className="py-20 md:py-32 px-6 section-yellow">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -235,7 +235,7 @@ const About: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-block bg-accent text-black font-bold uppercase tracking-widest px-10 py-4 rounded-full hover:bg-accent/90 transition-colors text-sm"
+                className="inline-block bg-[#1A1A1A] text-[#E9B741] font-bold uppercase tracking-widest px-10 py-4 rounded-full hover:bg-[#333] transition-colors text-sm"
               >
                 Start a Project
               </Link>

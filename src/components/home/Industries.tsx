@@ -8,7 +8,7 @@ const industries = [
 
 const Industries: React.FC = () => {
   return (
-    <section className="py-20 md:py-40 px-6 bg-base">
+    <section className="py-20 md:py-40 px-6 section-yellow">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

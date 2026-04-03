@@ -7,17 +7,18 @@
   --color-surface: var(--surface);
   --color-foreground: var(--foreground);
   --color-text-muted: var(--text-muted);
-  
+
   --font-heading: "Plus Jakarta Sans", sans-serif;
   --font-body: "Inter", sans-serif;
 }
 
+/* Default = dark theme */
 :root {
   --base: #1A1A1A;
   --surface: #242424;
   --foreground: #F9F9F9;
   --text-muted: rgba(249, 249, 249, 0.6);
-  
+
   background-color: var(--base);
   color: var(--foreground);
   font-family: var(--font-body);
@@ -40,7 +41,6 @@ body {
   --surface: #FFFFFF;
   --foreground: #1A1A1A;
   --text-muted: rgba(26, 26, 26, 0.6);
-  /* Also override Tailwind v4 color tokens directly so bg-base/text-foreground etc. update */
   --color-base: #F9F9F9;
   --color-surface: #FFFFFF;
   --color-foreground: #1A1A1A;
@@ -50,6 +50,40 @@ body {
 [data-theme='light'] body {
   background-color: #F9F9F9;
   color: #1A1A1A;
+}
+
+[data-theme='dark'] {
+  --base: #1A1A1A;
+  --surface: #242424;
+  --foreground: #F9F9F9;
+  --text-muted: rgba(249, 249, 249, 0.6);
+  --color-base: #1A1A1A;
+  --color-surface: #242424;
+  --color-foreground: #F9F9F9;
+  --color-text-muted: rgba(249, 249, 249, 0.6);
+}
+
+[data-theme='dark'] body {
+  background-color: #1A1A1A;
+  color: #F9F9F9;
+}
+
+/* ── Block-wise alternating section: yellow ── */
+.section-yellow {
+  background-color: #E9B741;
+  color: #1A1A1A;
+  /* Override all theme tokens so child utility classes adapt */
+  --foreground: #1A1A1A;
+  --text-muted: rgba(26, 26, 26, 0.6);
+  --color-foreground: #1A1A1A;
+  --color-text-muted: rgba(26, 26, 26, 0.6);
+  /* Accent becomes dark so text-accent labels stay readable */
+  --color-accent: #1A1A1A;
+  /* Surface/base tokens for cards nested inside yellow sections */
+  --base: rgba(255, 255, 255, 0.15);
+  --color-base: rgba(255, 255, 255, 0.15);
+  --surface: rgba(255, 255, 255, 0.25);
+  --color-surface: rgba(255, 255, 255, 0.25);
 }
 
 h1, h2, h3, h4, h5, h6 {

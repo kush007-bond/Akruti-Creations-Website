@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Philosophy: React.FC = () => {
   return (
-    <section className="py-20 md:py-40 px-6 bg-base text-foreground">
+    <section className="py-20 md:py-40 px-6 section-yellow">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <motion.div

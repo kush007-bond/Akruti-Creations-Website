@@ -5,7 +5,7 @@ import MagneticButton from '../MagneticButton';
 
 const CTA: React.FC = () => {
   return (
-    <section className="pt-40 pb-20 px-6 bg-base text-foreground">
+    <section className="pt-40 pb-20 px-6 section-yellow">
       <div className="max-w-7xl mx-auto text-center">
         <motion.h2 
           initial={{ opacity: 0, y: 50 }}
@@ -27,7 +27,7 @@ const CTA: React.FC = () => {
             Ready to redefine your brand's physical presence?
           </p>
           <MagneticButton>
-            <Link to="/contact" className="bg-accent text-[#1A1A1A] px-16 py-8 rounded-full font-black text-2xl hover:scale-110 transition-transform shadow-2xl block">
+            <Link to="/contact" className="bg-[#1A1A1A] text-[#E9B741] px-16 py-8 rounded-full font-black text-2xl hover:scale-110 transition-transform shadow-2xl block">
               START A PROJECT
             </Link>
           </MagneticButton>

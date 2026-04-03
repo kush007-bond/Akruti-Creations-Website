@@ -114,7 +114,7 @@ const Contact: React.FC = () => {
                 </button>
               </motion.div>
             ) : (
-              <form ref={formRef} className="space-y-8" onSubmit={handleSubmit}>
+              <form className="space-y-8" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="space-y-2">
                     <label className="text-xs font-bold uppercase tracking-widest text-foreground/50">Full Name</label>
@@ -181,7 +181,7 @@ const Contact: React.FC = () => {
                   disabled={status === 'sending'}
                   whileHover={{ scale: status === 'sending' ? 1 : 1.02 }}
                   whileTap={{ scale: status === 'sending' ? 1 : 0.98 }}
-                  className="w-full bg-accent text-[#1A1A1A] py-6 rounded-lg font-bold hover:bg-foreground hover:text-base transition-all flex items-center justify-center gap-3 shadow-lg uppercase disabled:opacity-70 disabled:cursor-not-allowed"
+                  className="w-full bg-accent text-[#1A1A1A] py-6 rounded-lg font-bold hover:bg-[#1A1A1A] hover:text-accent transition-all flex items-center justify-center gap-3 shadow-lg uppercase disabled:opacity-70 disabled:cursor-not-allowed"
                 >
                   {status === 'sending' ? (
                     <>

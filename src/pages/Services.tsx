@@ -28,8 +28,10 @@ const Services: React.FC = () => {
   const [selected, setSelected] = useState<Service | null>(null);
 
   return (
-    <div className="pt-32 pb-20 bg-base">
-      <header className="max-w-7xl mx-auto px-6 mb-16 md:mb-40 text-center">
+    <div>
+      {/* Block 1 — yellow */}
+      <header className="pt-32 pb-16 md:pb-40 px-6 text-center section-yellow">
+        <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -43,9 +45,11 @@ const Services: React.FC = () => {
             We are an end-to-end brand experience partner. If it can be imagined, it can be built by Akruti.
           </p>
         </motion.div>
+        </div>
       </header>
 
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-px bg-foreground/5">
+      {/* Block 2 — base */}
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-px bg-foreground/5 bg-base">
         {services.map((service, idx) => (
           <motion.div
             key={service.title}
@@ -113,14 +117,15 @@ const Services: React.FC = () => {
         ))}
       </section>
 
-      <section className="py-40 px-6 text-center">
+      {/* Block 3 — yellow */}
+      <section className="py-40 px-6 text-center section-yellow">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: false, margin: "100px" }}
         >
           <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-12 uppercase">HAVE A SPECIFIC REQUIREMENT?</h2>
-          <Link to="/contact" className="inline-block bg-accent text-[#1A1A1A] px-12 py-6 rounded-full font-black text-xl hover:bg-foreground hover:text-base transition-all uppercase shadow-xl">
+          <Link to="/contact" className="inline-block bg-[#1A1A1A] text-[#E9B741] px-12 py-6 rounded-full font-black text-xl hover:bg-[#333] transition-all uppercase shadow-xl">
             LET'S DISCUSS
           </Link>
         </motion.div>
@@ -185,7 +190,7 @@ const Services: React.FC = () => {
                 <Link
                   to="/contact"
                   onClick={() => setSelected(null)}
-                  className="inline-flex items-center gap-3 bg-accent text-[#1A1A1A] px-8 py-4 rounded-full font-black uppercase tracking-widest text-sm hover:bg-foreground hover:text-base transition-all shadow-lg"
+                  className="inline-flex items-center gap-3 bg-accent text-[#1A1A1A] px-8 py-4 rounded-full font-black uppercase tracking-widest text-sm hover:bg-[#1A1A1A] hover:text-accent transition-all shadow-lg"
                 >
                   GET A QUOTE <ArrowRight className="w-4 h-4" />
                 </Link>
