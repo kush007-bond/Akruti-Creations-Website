@@ -56,8 +56,7 @@ const Process: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "100px" }}
                 transition={{ duration: 0.5, delay: idx * 0.08 }}
-                whileHover={{ backgroundColor: "rgba(233, 183, 65, 0.05)" }}
-                className="bg-base p-6 md:p-12 transition-colors group"
+                className="bg-base p-6 md:p-12 transition-colors group hover:bg-accent/5"
               >
                 <div className="flex justify-between items-start mb-10">
                   <div className="w-14 h-14 rounded-2xl bg-surface flex items-center justify-center text-accent group-hover:scale-110 transition-transform">

@@ -10,6 +10,7 @@ const Projects = lazy(() => import('./pages/Projects'));
 const ProjectDetail = lazy(() => import('./pages/ProjectDetail'));
 const Services = lazy(() => import('./pages/Services'));
 const Contact = lazy(() => import('./pages/Contact'));
+const Careers = lazy(() => import('./pages/Careers'));
 
 // Loading component
 const PageLoader = () => (
@@ -31,6 +32,7 @@ const App: React.FC = () => {
             <Route path="/projects/:id" element={<ProjectDetail />} />
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/careers" element={<Careers />} />
           </Routes>
         </Suspense>
       </Layout>
